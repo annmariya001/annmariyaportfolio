@@ -1,475 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Ann_Mariya_Raju</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>Ann Mariya Raju | Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Portfolio Website" name="keywords">
+    <meta content="Ann Mariya Raju Portfolio" name="description">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Montserrat',sans-serif;
+        }
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Ann</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        body{
+            background:#f5f5f5;
+            color:#333;
+        }
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">About</a>
-                        <a href="#service" class="nav-item nav-link">Service</a>
-                        <a href="#experience" class="nav-item nav-link">Experience</a>
-                        <a href="#education" class="nav-item nav-link">Education</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
-                    </div>
-                </div>
+        .navbar{
+            background:#111;
+            padding:15px 50px;
+        }
+
+        .navbar-brand{
+            color:#fff !important;
+            font-size:28px;
+            font-weight:700;
+        }
+
+        .nav-link{
+            color:#fff !important;
+            margin-left:20px;
+        }
+
+        .hero{
+            height:100vh;
+            display:flex;
+            align-items:center;
+            background:linear-gradient(to right,#111,#222);
+            color:#fff;
+            padding:50px;
+        }
+
+        .hero h1{
+            font-size:60px;
+            font-weight:700;
+        }
+
+        .hero p{
+            font-size:22px;
+        }
+
+        .btn-custom{
+            background:#ff4d5a;
+            color:#fff;
+            padding:12px 25px;
+            border-radius:30px;
+            text-decoration:none;
+            display:inline-block;
+            margin-top:20px;
+        }
+
+        .hero img{
+            width:350px;
+            border-radius:20px;
+        }
+
+        section{
+            padding:80px 50px;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:50px;
+        }
+
+        .section-title h2{
+            font-size:40px;
+            font-weight:700;
+            color:#111;
+        }
+
+        .about-container{
+            display:flex;
+            align-items:center;
+            gap:50px;
+            flex-wrap:wrap;
+        }
+
+        .about-container img{
+            width:300px;
+            border-radius:20px;
+        }
+
+        .skills .skill{
+            margin-bottom:20px;
+        }
+
+        .progress{
+            height:10px;
+            background:#ddd;
+            border-radius:20px;
+            overflow:hidden;
+        }
+
+        .progress-bar{
+            height:100%;
+            background:#ff4d5a;
+        }
+
+        .service-container,
+        .project-container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:#fff;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card i{
+            font-size:40px;
+            color:#ff4d5a;
+            margin-bottom:20px;
+        }
+
+        .timeline{
+            border-left:4px solid #ff4d5a;
+            padding-left:30px;
+        }
+
+        .timeline-item{
+            margin-bottom:40px;
+        }
+
+        .timeline-item h4{
+            color:#ff4d5a;
+            margin-bottom:10px;
+        }
+
+        footer{
+            background:#111;
+            color:#fff;
+            text-align:center;
+            padding:30px;
+        }
+
+        .social a{
+            color:#fff;
+            margin:0 10px;
+            font-size:22px;
+        }
+
+        @media(max-width:768px){
+
+            .hero{
+                flex-direction:column;
+                text-align:center;
+                height:auto;
+            }
+
+            .hero img{
+                margin-top:30px;
+                width:250px;
+            }
+
+            .hero h1{
+                font-size:42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Ann</a>
+
+    <div class="ml-auto">
+        <a class="nav-link d-inline" href="#about">About</a>
+        <a class="nav-link d-inline" href="#skills">Skills</a>
+        <a class="nav-link d-inline" href="#experience">Experience</a>
+        <a class="nav-link d-inline" href="#projects">Projects</a>
+        <a class="nav-link d-inline" href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+                <p>Hello, I'm</p>
+                <h1>Ann Mariya Raju</h1>
+                <h3>Software Developer | WordPress Developer | Python Developer</h3>
+
+                <p>
+                    Passionate software developer skilled in Python, Django,
+                    WordPress, PHP, and responsive web development.
+                </p>
+
+                <a href="img/Ann_Mariya_Raju_CV.pdf" class="btn-custom" download>
+                    Download CV
+                </a>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <img src="img/annma.jpg" alt="Ann Image">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="section-title">
+        <h2>About Me</h2>
+    </div>
+
+    <div class="about-container">
+
+        <img src="img/ANNA.jpg" alt="About Image">
+
+        <div>
+            <p>
+                Software Developer with expertise in creating scalable applications
+                and websites. Skilled in Python, PHP, WordPress plugin development,
+                Django framework, and database management.
+            </p>
+
+            <p>
+                Passionate about solving complex problems and delivering
+                impactful user-focused solutions using modern technologies
+                like JavaScript, HTML, CSS, and responsive frameworks.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <div class="section-title">
+        <h2>Skills</h2>
+    </div>
+
+    <div class="skills">
+
+        <div class="skill">
+            <h5>Python / Django - 95%</h5>
+            <div class="progress">
+                <div class="progress-bar" style="width:95%"></div>
             </div>
         </div>
-        <!-- Nav Bar End -->
 
-
-        <!-- Hero Start -->
-        <div class="hero" id="home">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-6">
-                        <div class="hero-content">
-                            <div class="hero-text">
-                                <p>I'm</p>
-                                <h1>Ann Mariya Raju</h1>
-                                <h2></h2>
-                                <div class="typed-text">Software Developer, Wordpress Developer, Python Developer, PHP Developer, Content Creator</div>
-                            </div>
-                            <div class="hero-btn">
-                                <a class="btn" href="img/Ann_Mariya_Raju_CV.pdf" Download >Download cv</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 d-none d-md-block">
-                        <div class="hero-image">
-                            <img src="img/annma.jpg" alt="Ann Image">
-                        </div>
-                    </div>
-                </div>
+        <div class="skill">
+            <h5>HTML / CSS / JavaScript - 95%</h5>
+            <div class="progress">
+                <div class="progress-bar" style="width:95%"></div>
             </div>
         </div>
-        <!-- Hero End -->
 
-
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="img/ANNA.jpg" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="section-header text-left">
-                                <p>ABOUT ME</p>
-                            </div>
-                            <div class="about-text">
-                                <p>
-                                    I am a passionate software developer and an MCA student with a strong interest in coding, problem-solving, and creating innovative web and software applications. With a dedication to continuous learning, I strive to enhance my technical skills and build impactful solutions.
-                                </p>
-                            </div>
-                            <div class="skills">
-                                <div class="skill-name">
-                                    <p>PYTHON DJANGO</p><p>95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>HTML/CSS/JAVASCRIPT</p><p>95%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>PHP</p><p>90%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>WORDPRESS</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+        <div class="skill">
+            <h5>PHP - 90%</h5>
+            <div class="progress">
+                <div class="progress-bar" style="width:90%"></div>
             </div>
         </div>
-        <!-- About End -->
-        
-        
-        <!-- Service Start -->
-        <div class="service" id="service">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>What I do</p>
-                    <h2>Awesome Quality Services</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Front End Development</h3>
-                                <p>
-                                   I am responsible for creating projects using front-end technologies, designing user-friendly interfaces, and developing responsive websites with seamless user experiences. My work involves utilizing HTML, CSS, JavaScript, and frameworks like React.js and Bootstrap.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fa fa-laptop-code"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>DataBase Management</h3>
-                                <p>I specialize in designing, maintaining, and optimizing databases to ensure efficient data storage, retrieval, and security. My focus is on creating scalable database solutions that support seamless operations and meet business needs.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Back End Development</h3>
-                                <p>
-                                    I am responsible for creating projects by building robust server-side solutions, designing efficient databases, developing APIs, and ensuring seamless integration with front-end systems..
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fab fa-apple"></i>
-                            </div>
-                            <div class="service-text">
-                                <h3>Cloud Hosting</h3>
-                                <p>
-                                    I am responsible for creating projects by deploying, managing, and optimizing applications on cloud platforms, ensuring scalability, security, and high availability.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+        <div class="skill">
+            <h5>WordPress - 90%</h5>
+            <div class="progress">
+                <div class="progress-bar" style="width:90%"></div>
             </div>
         </div>
-        <!-- Service End -->
-        
-        
-         <!-- Experience Start -->
-        <div class="experience" id="experience">
-            <div class="container">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <h2>Working Experience</h2>
-                </header>
-                <div class="timeline">
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">APR 2024 - SEP 2024</div>
-                            <h2>Associate Software Engineer</h2>
-                            <h4>TeMetaTech, Thiruvananthapuram</h4>
-                            <p>
-                               An Associate Software Engineer is an entry-level professional responsible for designing, developing, testing, and maintaining software applications. They collaborate with teams to analyze requirements, write clean and efficient code, and troubleshoot software issues. This role often involves learning and applying new technologies, following industry best practices, and contributing to project deliverables under the guidance of senior engineers.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">Jan 2021 - Jun 2021</div>
-                            <h2>Software Developer Intern</h2>
-                            <h4>Soften Technologies, Kochi</h4>
-                            <p>
-                                As a Software Developer Intern, I was responsible for creating dynamic modules using front-end technologies such as HTML, CSS, and JavaScript. I contributed to projects built with the Python Django framework, focusing on developing and enhancing web applications. Additionally, I explored innovative ways to visualize and share daily test result reports with team members, ensuring clear and effective communication through well-designed interfaces. This role allowed me to gain hands-on experience in both front-end and back-end development while collaborating with a professional team.
-                            </p>
-                        </div>
-                    </div>
 
+    </div>
+</section>
 
-                </div>
-            </div>
-        </div>
-        <!-- Job Experience End -->
+<!-- Services -->
+<section id="services">
+    <div class="section-title">
+        <h2>Services</h2>
+    </div>
 
+    <div class="service-container">
 
-
-        <!--- Education Experience ---->
-        
-        
-        <div class="experience" id="education">
-            <div class="container">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <h2>Qualifications</h2>
-                </header>
-                <div class="timeline">
-
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">JUN 2019 - AUG 2021</div>
-                            <h2>MCA</h2>
-                            <h4>Amal joythi college of Engineering,Kanjirapally</h4>
-                            <p>
-                              <!--- annaammak venakile add akiko---->
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text">
-                            <div class="timeline-date">JUN 2016 - AUG 2019</div>
-                            <h2>BCA</h2>
-                            <h4>Assumption College,Changanassery</h4>
-                            <p>
-                                <!--- annaammak venakile add akiko---->
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-        <!-- Portfolio Start -->
-        <div class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <h2>My Excellent Works</h2>
-                </div>
-                <!---
-                <div class="row">
-                    <div class="col-12">
-                        <ul id="portfolio-filter">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-1">Web Design</li>
-                            <li data-filter=".filter-2">Mobile Apps</li>
-                            <li data-filter=".filter-3">Game Dev</li>
-                        </ul>
-                    </div>
-                </div>--->
-                <div class="row portfolio-container">
-
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-1.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>E_Resturant Website</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-2.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Custom Contact Form Plugin</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/portfolio-3.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Portfolio website</h3>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio End -->
-
-        <!-- Contact Start
-        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-8">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-         Contact End -->
-
-
-        <!-- Blog Start
-        <div class="blog" id="blog">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>From Blog</p>
-                    <h2>Latest Articles</h2>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="blog-img">
-                                <img src="img/blog-1.jpg" alt="Blog">
-                            </div>
-                            <div class="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Web Design</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>5</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="blog-img">
-                                <img src="img/blog-2.jpg" alt="Blog">
-                            </div>
-                            <div class="blog-text">
-                                <h2>Lorem ipsum dolor sit amet</h2>
-                                <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Apps Design</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
-                                </p>
-                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-         Blog End -->
-
-
-        <!-- Footer Start -->
-        <div class="footer wow fadeIn" data-wow-delay="0.3s">
-            <div class="container-fluid">
-                <div class="container">
-                    <div class="footer-info">
-                        <h2>Ann Mariya Raju</h2>
-                        <h3>Mariya Bhavan VandanamTDMC Alappuzha Pin-688005</h3>
-                        <div class="footer-menu">
-                            <p>9544234058</p>
-                            <p>annmariyaaraju@gmail.com</p>
-                        </div>
-                        <div class="footer-social">
-
-
-                            <a href="https://www.linkedin.com/in/ann-mariya-raju-6473531a1/ "><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <p>&copy; Ann Mariya Raju All Right Reserved.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
-        
-        
-        <!-- Back to top button -->
-        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        
-        <!-- Pre Loader -->
-        <div id="loader" class="show">
-            <div class="loader"></div>
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h4>Front-End Development</h4>
+            <p>
+                Creating responsive and user-friendly websites using HTML,
+                CSS, JavaScript, Bootstrap, and React.js.
+            </p>
         </div>
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/typed/typed.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+        <div class="card">
+            <i class="fas fa-server"></i>
+            <h4>Back-End Development</h4>
+            <p>
+                Building scalable server-side applications using Python,
+                Django, PHP, APIs, and database integration.
+            </p>
+        </div>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+        <div class="card">
+            <i class="fab fa-wordpress"></i>
+            <h4>WordPress Development</h4>
+            <p>
+                Customizing themes, plugins, landing pages,
+                and optimizing WordPress websites.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-database"></i>
+            <h4>Database Management</h4>
+            <p>
+                Managing MySQL databases with optimized storage,
+                security, and efficient query handling.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+    <div class="section-title">
+        <h2>Experience</h2>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h4>January 2025 - Present</h4>
+            <h3>Web Designer / WordPress Developer Intern</h3>
+            <p><strong>Cpool Digital Learning, Kakkanad</strong></p>
+
+            <p>
+                Designed and developed responsive websites using WordPress,
+                HTML, CSS, and JavaScript. Worked on live client projects,
+                customized WordPress themes/plugins, and optimized UI/UX.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>April 2024 - September 2024</h4>
+            <h3>Associate Software Engineer Trainee</h3>
+            <p><strong>TeMeta Tech, Kerala</strong></p>
+
+            <p>
+                Developed analytics tools, customized WordPress websites,
+                and created software performance visualization dashboards
+                using JavaScript and CSS.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>January 2021 - June 2021</h4>
+            <h3>Software Developer Intern</h3>
+            <p><strong>Soften Technologies, Kochi</strong></p>
+
+            <p>
+                Developed front-end modules using Django framework,
+                JavaScript, HTML, and CSS while creating dynamic reports.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+    <div class="section-title">
+        <h2>Education</h2>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h4>2018 - 2021</h4>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p>Amal Jyothi College of Engineering, KTU University</p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>2014 - 2017</h4>
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>Assumption College, MG University</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <div class="section-title">
+        <h2>Projects</h2>
+    </div>
+
+    <div class="project-container">
+
+        <div class="card">
+            <h4>Online Restaurant Management System</h4>
+            <p>
+                Django-based platform for menu management,
+                order processing, inventory tracking,
+                and sales reporting.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Custom Contact Form Plugin</h4>
+            <p>
+                Developed a custom WordPress plugin with
+                database storage and automated email notifications.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Find The Routes Website</h4>
+            <p>
+                Travel website for showcasing tour packages,
+                booking services, and responsive UI design.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Horza Events Website</h4>
+            <p>
+                Event management website with modern UI/UX,
+                responsive design, and optimized performance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>SSI UAE Website</h4>
+            <p>
+                Corporate website focusing on service presentation,
+                accessibility, and WordPress customization.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications">
+    <div class="section-title">
+        <h2>Certifications</h2>
+    </div>
+
+    <div class="project-container">
+
+        <div class="card">
+            <h4>Introduction to Generative AI</h4>
+            <p>Google Certification</p>
+        </div>
+
+        <div class="card">
+            <h4>Linux for Beginners</h4>
+            <p>Udemy Certification</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <div class="section-title">
+        <h2>Contact</h2>
+    </div>
+
+    <div class="text-center">
+        <p><strong>Email:</strong> annmariyaaraju@gmail.com</p>
+        <p><strong>Phone:</strong> 9544234058</p>
+        <p><strong>Location:</strong> Alappuzha, Kerala - 688005</p>
+
+        <div class="social mt-4">
+            <a href="https://www.linkedin.com/in/ann-mariya-raju-6473531a1/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/annmariya001" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Ann Mariya Raju | All Rights Reserved</p>
+</footer>
+
+</body>
 </html>
